@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "Yash Kamal Bhatia"
-date: 2023-06-19
 ---
 Location: St. Louis, Missouri, United States  
 Email: [ybhatia@slu.edu](mailto:ybhatia@slu.edu)  
