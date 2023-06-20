@@ -1,5 +1,3 @@
-# Yash Bhatia
-
 Location: St. Louis, Missouri, United States  
 Email: [ybhatia@slu.edu](mailto:ybhatia@slu.edu)  
 Phone: +1 (314)- 814- 6036  
