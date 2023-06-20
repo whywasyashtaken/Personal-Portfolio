@@ -88,7 +88,7 @@ GitHub: [github.com/yashb196](https://github.com/yashb196)
 
 ### International Ambassidor
 **Saint Louis University** • Global Grad at Saint Louis University • January 2023 - Present
-* Help in organising events and maintaining relations with international students for any assistance related to university resources.
+* Help organize events and maintain relations with international students for any assistance related to university resources.
 * Participated in various events.
-* Co-ordinated various events.
+* Coordinated various events.
 
