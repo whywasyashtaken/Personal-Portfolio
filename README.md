@@ -1,51 +1,94 @@
-<header>
+# Yash Bhatia
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+Location: St. Louis, Missouri, United States  
+Email: [ybhatia@slu.edu](mailto:ybhatia@slu.edu)  
+Phone: +1 (314)- 814- 6036  
+LinkedIn: [linkedin.com/in/yashbhatia238/](https://www.linkedin.com/in/yashbhatia238/)  
+GitHub: [github.com/yashb196](https://github.com/yashb196)  
 
-# GitHub Pages
+## Education
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+### Computer Science
+**Saint Louis University** • US, MO, Saint Louis • 2024
 
-</header>
+### Computer Engineering
+**University of Mumbai** • 2019
 
-<!--
-  <<< Author notes: Step 3 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
-  Historic note: previous version checked the homepage content was not empty.
--->
+## Skills
 
-## Step 3: Customize your homepage
+* Language: Java, C/C++, JavaScript, HTML, CSS, Python, React Js, Node Js
+* Operating Systems: Kali Linux, Windows, Android, Ubuntu
+* Tools: Nmap, Wireshark, Psql
+* Software: Android Studio, Visual Studio, Anaconda, Sublime, PgAdmin
 
-_Nice work setting the theme! :sparkles:_
+## Experience
 
-You can customize your homepage by adding content to either an `index.md` file or the `README.md` file. GitHub Pages first looks for an `index.md` file. Your repository has an `index.md` file so we can update it to include your personalized content.
+### Graduate Assistant
+* Working as a Tech Lead for open-source projects, Organizing Scrum Meetings and problem-solving sessions.
+* Building Software from Scratch while learning new technologies.
+* Ensuring Quality and following Scrum Principles.
 
-### :keyboard: Activity: Create your homepage
+### Manager/Senior Engineer
+* Working as a hardware manager assembling and troubleshooting computers /laptops and providing logical solutions to their issues.
+* Participated in Daily Meetings with employees and clients.
+* Ensured Quality and Effectiveness of the product.
 
-1. Browse to the `index.md` file in the `my-pages` branch.
-1. In the upper right corner, open the file editor.
-1. Type the content you want on your homepage. You can use Markdown formatting on this page.
-1. (optional) You can also modify `title:` or just ignore it for now. We'll discuss it in the next step.
-1. Commit your changes to the `my-pages` branch.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+### Full Stack Developer
+* To create a web-based software with TDD (Test Driven Development) approach, resulting in smoother and error-free software.
+* Participated in weekly Scrum Meetings, addressing common issues to the application and working to provide an efficient solution.
+* Participated in following CICD Pipeline.
 
-<footer>
+## Projects
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+### Shopping Cart Application
+**Saint Louis University** • August 2022 - November 2022
+* Built a shopping cart application with encapsulated data, a prototype consisting of Add to Cart, Add Items to Cart, and Purchase Item.
+* The technologies used while creating this project: - React Js, Java Spring Boot.
+* While creating the application we followed Scrum Principles which consist of the TDD Approach.
 
----
+### Lived Religion
+**Saint Louis University** • February 2023 - Present
+* Working as a tech lead to create a mobile application using ReactJs and typescript.
+* This application uses technologies such as photos, texts, and maps.
 
-Get help: [Post in our discussion board](https://github.com/skills/.github/discussions) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
+### Search Engine Based on Semantic Web
+**Mumbai University** • January 2019 - June 2019
+* Developed a search engine which can provide information of any criteria using keywords.
+* Used Dbpedia and SparQl Query to Search the data based on Keywords, Improved accuracy of search results by 30% and response time by 15% as compared to existing system.
 
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+## Coursework
 
-</footer>
+### Software Engineering
+**Saint Louis University** • 2023
+* Built a drone remote control from scratch
+
+### Machine Learning
+**Saint Louis University** • 2023
+* Providing Accuracy and learning various methodologies to find the most accurate models
+
+### Principles of Software Development
+**Saint Louis University** • 2022
+* Co-ordinating with a small group, became team lead for the project handled scrum activities
+
+### Artificial Intelligence
+**Saint Louis University** • 2022
+* Learning how models adapt to human interaction and improve their accuracy
+
+### Data Structures
+**Mumbai University** • 2018
+* Every Programming Language uses the basics of Data Structures
+
+## Certifications
+
+### Data Science
+**Ktech Academy**
+* Learnt and enabled Data Science principles
+
+## Involvement
+
+### International Ambassidor
+**Saint Louis University** • Global Grad at Saint Louis University • January 2023 - Present
+* Help in organising events and maintaining relations with international students for any assistance related to university resources.
+* Participated in various events.
+* Co-ordinated various events.
+
