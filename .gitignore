@@ -35,5 +35,8 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+<<<<<<< HEAD
 
 node_modules/
+=======
+>>>>>>> 9c2e5e31 (Initial commit)
