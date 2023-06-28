@@ -19,4 +19,52 @@
     color: #666;
     line-height: 1.6;
   }
+  /* Home.module.css */
+
+.sectionContainer {
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 800px;
+}
+
+.sectionHeader {
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.sectionContent {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Skills.module.css */
+
+.container {
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.description {
+  text-align: left;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.description ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.description li {
+  text-align: left;
+}
+
+/* ...rest of your CSS... */
+
+
   
