@@ -24,4 +24,17 @@
     background-color: #ecf0f1;
     color: #2c3e50;
   }
+
+  /* Navbar.module.css */
+
+/* Navbar.module.css */
+
+.navbarContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;  /* ensure the navbar takes full width */
+  z-index: 100; /* keep the navbar above all other content */
+}
+
+
   

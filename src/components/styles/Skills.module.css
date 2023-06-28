@@ -1,18 +1,59 @@
-/* styles/Skills.module.css */
+/* Skills.module.css */
 
-.aboutContainer {
-    text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .header {
-    font-size: 1.8em;
-    color: #333;
-  }
-  
-  .description {
-    font-size: 1.2em;
-    color: #666;
-  }
-  
+.skillsContainer {
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 800px;
+  text-align: center;
+}
+
+.skillsContent {
+  font-size: 1.2em;
+  color: #333;
+  text-align: left;
+}
+
+/* Skills.module.css */
+
+.skillsContent li {
+  text-align: left; /* Align all list items to the left */
+  margin-bottom: 1em;
+  margin-right: 1em; /* Add right margin between list items */
+}
+
+.skillsContent ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.skillsContent b {
+  color: #333;
+  font-size: 1.4em;
+  display: block;
+  margin-bottom: 0.5em; /* Add spacing between the bold headings */
+  text-align: center;
+}
+
+.skillsContent p {
+  margin-bottom: 1em;
+}
+
+
+.skillsContent li:last-child {
+  text-align: center; /* Align only the last item to the center */
+}
+
+
+.skillsContent b {
+  color: #333;
+  font-size: 1.4em;
+  display: block;
+  margin-bottom: 0.5em; /* Add spacing between the bold headings */
+  text-align: center;
+}
+
+.skillsContent p {
+  margin-bottom: 1em;
+}
