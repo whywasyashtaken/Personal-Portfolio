@@ -1,23 +1,24 @@
+/* Common styles for both desktop and mobile */
+
 .home {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
   text-align: center;
   padding: 20px;
-  background-color: #282c34; /* Dark background */
-  color: #f8f8f2; /* Light text color */
-  margin-top: 80px; /* Shift content upwards */
+  background-color: #282c34;
+  color: #f8f8f2;
+  margin-top: 80px;
 }
 
 .home h1 {
   font-size: 2.5rem;
-  color: #f8f8f2; /* Light text color */
+  color: #f8f8f2;
 }
 
 .home p {
   font-size: 1.2rem;
-  color: #f8f8f2; /* Light text color */
+  color: #f8f8f2;
   line-height: 1.6;
 }
 
@@ -25,23 +26,21 @@
   padding: 2em;
   margin: 2em auto;
   max-width: 800px;
-  background-color: #21252b; /* Slightly lighter than background for contrast */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Shadow for 3D effect */
+  background-color: #21252b;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
 
 .sectionHeader {
   font-size: 2em;
   margin-bottom: 1em;
-  color: #f8f8f2; /* Light text color */
+  color: #f8f8f2;
 }
 
 .sectionContent {
   font-size: 1.2em;
-  color: #f8f8f2; /* Light text color */
+  color: #f8f8f2;
 }
-
-/* Skills.module.css */
 
 .container {
   text-align: center;
@@ -51,13 +50,13 @@
   text-align: center;
   font-size: 2em;
   margin-bottom: 1em;
-  color: #f8f8f2; /* Light text color */
+  color: #f8f8f2;
 }
 
 .description {
   text-align: left;
   font-size: 1.2em;
-  color: #f8f8f2; /* Light text color */
+  color: #f8f8f2;
 }
 
 .description ul {
@@ -67,7 +66,30 @@
 
 .description li {
   text-align: left;
-  color: #f8f8f2; /* Light text color */
+  color: #f8f8f2;
 }
 
-/* ...rest of your CSS... */
+/* Media queries for mobile */
+
+@media screen and (max-width: 767px) {
+  /* Adjustments for mobile screens */
+
+  .home {
+    margin-top: 60px;
+  }
+
+  .sectionContainer {
+    margin: 1em auto;
+    padding: 1em;
+    max-width: 100%;
+  }
+
+  .sectionHeader {
+    font-size: 1.8em;
+    margin-bottom: 0.8em;
+  }
+
+  .sectionContent {
+    font-size: 1em;
+  }
+}
