@@ -1,18 +1,65 @@
-/* styles/About.module.css */
+/* Skills.module.css */
 
-.aboutContainer {
-    text-align: center;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  .header {
-    font-size: 1.8em;
-    color: #333;
-  }
-  
-  .description {
-    font-size: 1.2em;
-    color: #666;
-  }
-  
+.educationontainer {
+  padding: 2em;
+  margin: 2em auto;
+  max-width: 800px;
+  text-align: center; /* Center align the container */
+}
+
+.educationContent {
+  font-size: 1.2em;
+  color: #333;
+  text-align: left; /* Align the text to the left */
+}
+
+.educationContent ul {
+  padding-left: 20px;
+}
+
+.educationContent b {
+  color: whitesmoke;
+  font-size: 1.4em;
+  display: block; /* Add a block display to make the headings take full width */
+  margin-bottom: 0.5em; /* Add some spacing between the headings */
+}
+
+.educationContent p {
+  margin-bottom: 1em;
+  color: whitesmoke;
+}
+
+
+.educationContent b {
+  color: whitesmoke;
+  font-size: 1.4em;
+}
+
+/* Skills.module.css */
+
+.container {
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+
+.description {
+  text-align: center;
+  font-size: 1.2em;
+  color: white;
+}
+
+.description ol {
+  padding-left: 0;
+  list-style-type:disc;
+}
+
+.description li {
+  text-align: center;
+}
+
+/* ...rest of your CSS... */

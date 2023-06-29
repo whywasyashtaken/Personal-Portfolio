@@ -5,12 +5,19 @@ import About from './About';
 import Skills from './Skills';
 import Experience from './Experience';
 import Education from './Education';
+import { InView } from 'react-intersection-observer';
 import Projects from './Projects';
 import Contact from './Contact';
+
+const sectionVariants = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+};
 
 const Home = () => {
   return (
     <motion.div
+    id="home"
       className={styles.home} // Add the CSS module class here
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -25,35 +32,95 @@ const Home = () => {
         <p>Please navigate through the website to learn more about my education, skills, experience, projects, and how to get in touch with me.</p>
       </div>
 
-      <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionHeader}>About</h2>
-        <About />
-      </div>
+      <InView triggerOnce>
+          {({ inView, ref }) => (
+            <motion.div
+            id="about"
+              ref={ref}
+              variants={sectionVariants}
+              initial="hidden"
+              animate={inView ? "show" : "hidden"}
+            >
+              <h2 className={styles.sectionHeader}>About</h2>
+              <About />
+            </motion.div>
+          )}
+        </InView>
 
-      <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionHeader}>Skills</h2>
-        <Skills />
-      </div>
+        <InView triggerOnce>
+          {({ inView, ref }) => (
+            <motion.div
+            id="skills" // Update the id attribute here to "skills"
+            ref={ref}
+            variants={sectionVariants}
+            initial="hidden"
+            animate={inView ? "show" : "hidden"}
+            >
+              <h2 className={styles.sectionHeader}>Skills</h2>
+              <Skills />
+            </motion.div>
+          )}
+        </InView>
 
-      <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionHeader}>Experience</h2>
-        <Experience />
-      </div>
+        <InView triggerOnce>
+          {({ inView, ref }) => (
+            <motion.div
+            id="experience" // Update the id attribute here to "skills"
+            ref={ref}
+            variants={sectionVariants}
+            initial="hidden"
+            animate={inView ? "show" : "hidden"}
+            >
+              <h2 className={styles.sectionHeader}>Experience</h2>
+              <Experience />
+            </motion.div>
+          )}
+        </InView>
 
-      <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionHeader}>Education</h2>
-        <Education />
-      </div>
+        <InView triggerOnce>
+          {({ inView, ref }) => (
+            <motion.div
+            id="education"
+              ref={ref}
+              variants={sectionVariants}
+              initial="hidden"
+              animate={inView ? "show" : "hidden"}
+            >
+              <h2 className={styles.sectionHeader}>Education</h2>
+              <Education />
+            </motion.div>
+          )}
+        </InView>
 
-      <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionHeader}>Projects</h2>
-        <Projects />
-      </div>
+        <InView triggerOnce>
+          {({ inView, ref }) => (
+            <motion.div
+            id="projects"
+              ref={ref}
+              variants={sectionVariants}
+              initial="hidden"
+              animate={inView ? "show" : "hidden"}
+            >
+              <h2 className={styles.sectionHeader}>Projects</h2>
+              <Projects />
+            </motion.div>
+          )}
+        </InView>
 
-      <div className={styles.sectionContainer}>
-        <h2 className={styles.sectionHeader}>Contact</h2>
-        <Contact />
-      </div>
+        <InView triggerOnce>
+          {({ inView, ref }) => (
+            <motion.div
+            id="contact"
+              ref={ref}
+              variants={sectionVariants}
+              initial="hidden"
+              animate={inView ? "show" : "hidden"}
+            >
+              <h2 className={styles.sectionHeader}>Contact</h2>
+              <Contact />
+            </motion.div>
+          )}
+        </InView>
     </motion.div>
   );
 };

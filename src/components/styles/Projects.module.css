@@ -10,12 +10,12 @@
 
 .header {
   font-size: 1.8em;
-  color: #333;
+  color: #f8f8f2; /* Light text color */
   margin-bottom: 20px;
 }
 
 .card {
-  background: #fff;
+  background: #21252b; /* Slightly lighter than background for contrast */
   border-radius: 2px;
   display: inline-block;
   height: auto;
@@ -23,7 +23,8 @@
   position: relative;
   width: 300px;
   padding: 20px;
-  box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  color: #f8f8f2; /* Light text color */
 }
 
 /* Add this new class */
@@ -33,13 +34,13 @@
 
 .card h3 {
   font-size: 1.3em;
-  color: #333;
+  color: #f8f8f2; /* Light text color */
   margin-bottom: 10px;
 }
 
 .card h4 {
   font-size: 1.1em;
-  color: #666;
+  color: #a9a9a9; /* Lighter text color */
   margin-bottom: 10px;
 }
 
@@ -49,6 +50,6 @@
 }
 
 .card a {
-  color: #1e90ff;
+  color: #50fa7b; /* Mint green for contrast and visibility */
   text-decoration: none;
 }

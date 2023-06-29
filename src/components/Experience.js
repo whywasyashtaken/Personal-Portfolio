@@ -5,6 +5,7 @@ import styles from './styles/Experience.module.css';
 import { motion } from 'framer-motion';
 
 function Experience() {
+  
   return (
     <motion.div
       className={styles.experienceContainer}

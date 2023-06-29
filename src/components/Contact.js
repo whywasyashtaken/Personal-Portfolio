@@ -1,4 +1,4 @@
-// components/About.js
+// components/Contact.js
 
 import React from 'react';
 import styles from './styles/Contact.module.css';
@@ -9,18 +9,18 @@ import { motion } from 'framer-motion';
 function Contact() {
   return (
     <motion.div
-            className={styles.home} // Add the CSS module class here
+            className={styles.home}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
         >
-   <div className="contact">
-            <div className="contact-info">
+   <div className={styles.contact}>
+            <div className={styles.contactInfo}>
                 <FontAwesomeIcon icon={faEnvelope} />
-                : ybhatia@slu.edu
+                :<a href="mailto:ybhatia@slu.edu">ybhatia@slu.edu</a>
             </div>
-            <div className="contact-info">
+            <div className={styles.contactInfo}>
                 <FontAwesomeIcon icon={faPhone} />
                 : +1 (314)- 814- 6036
             </div>
