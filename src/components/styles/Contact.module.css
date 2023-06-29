@@ -1,0 +1,18 @@
+/* styles/Contact.module.css */
+
+.aboutContainer {
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .header {
+    font-size: 1.8em;
+    color: #333;
+  }
+  
+  .description {
+    font-size: 1.2em;
+    color: #666;
+  }
+  
