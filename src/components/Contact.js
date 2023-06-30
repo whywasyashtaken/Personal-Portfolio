@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles/Contact.module.css';
 import { motion } from 'framer-motion';
 import githubIcon from './icons/github.png';
-import phoneIcon from './icons/smartphone-call.png';
+import phoneIcon from './icons/phone.png';
 import linkedinIcon from './icons/linkedin.png';
 import youtubeIcon from './icons/youtube.png';
 import twitterIcon from './icons/twitter.png';
