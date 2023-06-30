@@ -1,16 +1,16 @@
-/* Skills.module.css */
+/* Education.module.css */
 
-.educationontainer {
+.educationContainer {
+  position: relative;
   padding: 2em;
   margin: 2em auto;
   max-width: 800px;
-  text-align: center; /* Center align the container */
 }
 
 .educationContent {
   font-size: 1.2em;
   color: #333;
-  text-align: left; /* Align the text to the left */
+  text-align: left;
 }
 
 .educationContent ul {
@@ -20,8 +20,8 @@
 .educationContent b {
   color: whitesmoke;
   font-size: 1.4em;
-  display: block; /* Add a block display to make the headings take full width */
-  margin-bottom: 0.5em; /* Add some spacing between the headings */
+  display: block;
+  margin-bottom: 0.5em;
 }
 
 .educationContent p {
@@ -29,37 +29,21 @@
   color: whitesmoke;
 }
 
+/* Mobile styles */
+@media (max-width: 768px) {
+  .educationContainer {
+    padding: 1em;
+    margin: 1em auto;
+    max-width: 95%;
+  }
 
-.educationContent b {
-  color: whitesmoke;
-  font-size: 1.4em;
-}
+  .educationContent {
+    font-size: 1em;
+  }
 
-/* Skills.module.css */
-
-.container {
-  text-align: center;
-}
-
-.header {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-.description {
-  text-align: center;
-  font-size: 1.2em;
-  color: white;
-}
-
-.description ol {
-  padding-left: 0;
-  list-style-type:disc;
-}
-
-.description li {
-  text-align: center;
+  .educationContent b {
+    font-size: 1.2em;
+  }
 }
 
 /* ...rest of your CSS... */

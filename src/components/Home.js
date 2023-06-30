@@ -29,7 +29,8 @@ const Home = () => {
         <p>
           My name is Yash Bhatia, I'm a Computer Science student at Saint Louis University, graduating in 2024. I have a diverse set of skills, ranging from Java, C/C++, JavaScript, HTML, CSS, Python, React Js, to Node Js and many more.
         </p>
-        <p>Please navigate through the website to learn more about my education, skills, experience, projects, and how to get in touch with me.</p>
+        <p>To know more about my education, skills, experience, projects, etc please scroll through the website thank you .</p>
+        <p>My Resume <a href="https://drive.google.com/file/d/1EDBTREuVzEHCFo1PDqdhcVcBe2xVsYiY/view?usp=sharing">Yash Bhatia</a></p>
       </div>
 
       <InView triggerOnce>
@@ -41,7 +42,7 @@ const Home = () => {
               initial="hidden"
               animate={inView ? "show" : "hidden"}
             >
-              <h2 className={styles.sectionHeader}>About</h2>
+              <h2 className={styles.sectionHeader}>About Me</h2>
               <About />
             </motion.div>
           )}

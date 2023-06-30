@@ -13,12 +13,10 @@
   text-align: left;
 }
 
-/* Skills.module.css */
-
 .skillsContent li {
-  text-align: left; /* Align all list items to the left */
+  text-align: left;
   margin-bottom: 1em;
-  margin-right: 1em; /* Add right margin between list items */
+  margin-right: 1em;
 }
 
 .skillsContent ul {
@@ -33,7 +31,7 @@
   color: white;
   font-size: 1.4em;
   display: block;
-  margin-bottom: 0.5em; /* Add spacing between the bold headings */
+  margin-bottom: 0.5em;
   text-align: center;
 }
 
@@ -41,22 +39,32 @@
   margin-bottom: 1em;
   color: white;
 }
-
 
 .skillsContent li:last-child {
-  text-align: center; /* Align only the last item to the center */
-}
-
-
-.skillsContent b {
-  color: white;
-  font-size: 1.4em;
-  display: block;
-  margin-bottom: 0.5em; /* Add spacing between the bold headings */
   text-align: center;
 }
 
-.skillsContent p {
-  margin-bottom: 1em;
-  color: white;
+.skillsContent li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .skillsContent ul {
+    justify-content: flex-start; /* Align skills list items to the left on mobile */
+  }
+
+  .skillsContent li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8em;
+  }
+
+  .skillsContent li img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
 }

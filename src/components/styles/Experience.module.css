@@ -1,17 +1,16 @@
-/* Skills.module.css */
+/* Experience.module.css */
 
 .experienceContainer {
-  position: relative;  /* Add this */
+  position: relative;
   padding: 2em;
   margin: 2em auto;
   max-width: 800px;
-  text-align: center; /* Center align the container */
 }
 
 .experienceContent {
   font-size: 1.2em;
   color: white;
-  text-align: left; /* Align the text to the left */
+  text-align: left;
 }
 
 .experienceContent ul {
@@ -21,8 +20,8 @@
 .experienceContent b {
   color: whitesmoke;
   font-size: 1.4em;
-  display: block; /* Add a block display to make the headings take full width */
-  margin-bottom: 0.5em; /* Add some spacing between the headings */
+  display: block;
+  margin-bottom: 0.5em;
 }
 
 .experienceContent p {
@@ -30,38 +29,26 @@
   color: whitesmoke;
 }
 
-
-.experienceContent b {
-  color: whitesmoke;
-  font-size: 1.4em;
-
+.experienceContent a {
+  color: #50fa7b; /* Mint green for contrast and visibility */
+  text-decoration: none;
 }
 
-/* Skills.module.css */
+/* Mobile styles */
+@media (max-width: 768px) {
+  .experienceContainer {
+    padding: 1em;
+    margin: 1em auto;
+    max-width: 95%;
+  }
 
-.container {
-  text-align: center;
-}
+  .experienceContent {
+    font-size: 1em;
+  }
 
-.header {
-  text-align: center;
-  font-size: 2em;
-  margin-bottom: 1em;
-}
-
-.description {
-  text-align: center;
-  font-size: 1.2em;
-  color: #333;
-}
-
-.description ol {
-  padding-left: 0;
-  list-style-type:disc;
-}
-
-.description li {
-  text-align: center;
+  .experienceContent b {
+    font-size: 1.2em;
+  }
 }
 
 /* ...rest of your CSS... */

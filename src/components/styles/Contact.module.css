@@ -1,50 +1,69 @@
-.home {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Take up full viewport height */
-  width: 100%; /* Take up full width of its container */
-  text-align: center;
-  padding: 20px;
-  background-color: #282c34;
-  color: #f8f8f2;
-  box-sizing: border-box; /* Include padding in the total width and height */
-  margin: 0; /* Ensure no margin is affecting alignment */
-}
-
-.home h1 {
-  font-size: 2.5rem;
-  color: #f8f8f2;
-}
-
-.home p {
-  font-size: 1.2rem;
-  color: #a9a9a9;
-  line-height: 1.6;
-}
-
-.contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px 0; /* Add some margin on top and bottom */
-}
-
 .contactInfo {
   display: flex;
   align-items: center;
+  justify-content: center; /* Align items to the start */
+  margin-bottom: 20px;
+  }
+  
+  .contactInfo img {
+  margin-right: 10px; /* Add right margin to create spacing between icon and text */
+  }
+  
+  .contactInfo a {
+  color: #50fa7b; /* Updated color for URLs */
+  margin-left: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  }
+  
+  .contactInfo a:hover {
+  color: #a9a9a9;
+  }
+  
+  .socialIcons {
+  display: flex;
   justify-content: center;
-  margin-bottom: 20px; /* Increase bottom margin */
-}
-
-.contactInfo a {
-  color: #f8f8f2; /* Make the email hyperlink the same color as the other text */
-  margin-left: 5px; /* Add some space between the colon and the email */
-  text-decoration: none; /* Remove the underline */
-}
-
-.contactInfo a:hover {
-  color: #a9a9a9; /* Change color when hovering over the link */
-}
+  margin-top: 20px;
+  }
+  
+  .socialIcon {
+  width: 25px;
+  height: 25px;
+  margin: 0 10px;
+  }
+  
+  .emailIcon {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 2px;
+  }
+  
+  .phoneIcon {
+  width: 25px;
+  height: 25px;
+  margin-top: 2px;
+  }
+  
+  /* Mobile styles */
+  @media (max-width: 768px) {
+  .contactInfo a {
+  font-size: 1rem;
+  }
+  
+  .phoneIcon {
+  width: 20px;
+  height: 20px;
+  }
+  
+  .emailIcon {
+  width: 23px;
+  height: 23px;
+  margin-bottom: 2px;
+  }
+  
+  .socialIcon {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  }
+  }
