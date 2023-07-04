@@ -1,17 +1,25 @@
 /* Projects.module.css */
 
 .container {
+  position: relative;
+  padding: 2em; 
+  margin: 0 auto;
+  max-width: 100%;
+  background-color: #21252b;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  color: #f8f8f2;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center; /* Adjusts from 'space-between' to 'center' */
 }
 
 .header {
   font-size: 1.8em;
   color: #f8f8f2;
   margin-bottom: 20px;
+  width: 100%;
+  text-align: center; 
 }
 
 .card {
@@ -19,17 +27,20 @@
   border-radius: 2px;
   display: inline-block;
   height: auto;
-  margin: 1rem;
+  margin: 1rem; /* Adjusts from '1rem 0' to '1rem' for equal spacing */
   position: relative;
-  width: 300px;
+  width: calc(100% / 3 - 2rem); /* Adjusts from 'calc(100% / 3 - 1.5rem)' to 'calc(100% / 3 - 2rem)' to account for the margins */
   padding: 20px;
   box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   color: #f8f8f2;
 }
 
-/* Add this new class */
 .wider-card {
   width: 400px;
+}
+
+.card h3, .card h4, .card ul, .card a {
+  text-align: center; 
 }
 
 .card h3 {
@@ -54,10 +65,17 @@
   text-decoration: none;
 }
 
-/* Mobile styles */
 @media (max-width: 768px) {
+  .container {
+    padding: 1em;
+    margin: 0 auto;
+  }
+
   .card {
     width: 95%;
+    margin: 1em auto;
+    padding: 1em;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
   }
 
   .wider-card {

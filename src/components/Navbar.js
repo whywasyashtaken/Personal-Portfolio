@@ -1,36 +1,37 @@
 import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
+import { FaBook } from 'react-icons/fa';
+import { BsX } from 'react-icons/bs'; // Import close icon
 import styles from './styles/Navbar.module.css';
 import { motion } from 'framer-motion';
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState('');
   const [menuActive, setMenuActive] = useState(false);
+  const [bookOpen, setBookOpen] = useState(false);
 
   const handleSetActive = (section) => {
     setActiveSection(section);
-    setMenuActive(false); /* Change here */
-  };
-
-  const handleSetInactive = () => {
-    setActiveSection('');
+    if (menuActive) {
+      setMenuActive(false);
+    }
   };
 
   const handleMenuClick = () => {
     setMenuActive(!menuActive);
+    setBookOpen(false); // Close the book when opening the menu
   };
-
 
   return (
     <motion.nav
-      className={styles.navbar}
+      className={`${styles.navbar} ${menuActive ? styles.active : ''}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
       <button className={styles['menu-icon']} onClick={handleMenuClick}>
-        🍔
+      📓
       </button>
       <ul className={`${styles['nav-links']} ${menuActive ? styles.active : ''}`}>
         <li>
@@ -40,8 +41,10 @@ function Navbar() {
             duration={500}
             className={styles.link}
             active={activeSection === 'home'}
-            onSetActive={() => handleSetActive('home')}
-            onSetInactive={handleSetInactive}
+            onClick={() => {
+              handleSetActive('home');
+              setBookOpen(false); // Close the book when selecting a section
+            }}
           >
             Home
           </ScrollLink>
@@ -53,8 +56,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             active={activeSection === 'about'}
-            onSetActive={() => handleSetActive('about')}
-            onSetInactive={handleSetInactive}
+            onClick={() => handleSetActive('about')}
           >
             About
           </ScrollLink>
@@ -66,8 +68,8 @@ function Navbar() {
             duration={500}
             className={styles.link}
             active={activeSection === 'skills'}
-            onSetActive={() => handleSetActive('skills')}
-            onSetInactive={handleSetInactive}
+            onClick={() => handleSetActive('skills')}
+            
           >
             Skills
           </ScrollLink>
@@ -79,8 +81,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             active={activeSection === 'experience'}
-            onSetActive={() => handleSetActive('experience')}
-            onSetInactive={handleSetInactive}
+            onClick={() => handleSetActive('experience')}
           >
             Experience
           </ScrollLink>
@@ -92,8 +93,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             active={activeSection === 'education'}
-            onSetActive={() => handleSetActive('education')}
-            onSetInactive={handleSetInactive}
+            onClick={() => handleSetActive('education')}
           >
             Education
           </ScrollLink>
@@ -105,8 +105,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             active={activeSection === 'projects'}
-            onSetActive={() => handleSetActive('projects')}
-            onSetInactive={handleSetInactive}
+            onClick={() => handleSetActive('projects')}
           >
             Projects
           </ScrollLink>
@@ -118,8 +117,7 @@ function Navbar() {
             duration={500}
             className={styles.link}
             active={activeSection === 'contact'}
-            onSetActive={() => handleSetActive('contact')}
-            onSetInactive={handleSetInactive}
+            onClick={() => handleSetActive('contact')}
           >
             Contact
           </ScrollLink>

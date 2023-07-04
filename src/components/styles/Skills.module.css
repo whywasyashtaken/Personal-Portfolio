@@ -1,10 +1,14 @@
 /* Skills.module.css */
 
 .skillsContainer {
+  position: relative;
   padding: 2em;
-  margin: 2em auto;
-  max-width: 800px;
-  text-align: center;
+  margin: 0 auto; /* Updated to 0 to remove side margins */
+  max-width: 100%; /* Allows the container to take full width */
+  background-color: #21252b; /* Card background color */
+  border-radius: 10px; /* Card border radius */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Card box shadow */
+  color: #f8f8f2; /* Text color */
 }
 
 .skillsContent {

@@ -1,8 +1,12 @@
 .contactInfo {
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Align items to the start */
-  margin-bottom: 20px;
+  position: relative;
+  padding: 2em;
+  margin: 0 auto; /* Updated to 0 to remove side margins */
+  max-width: 100%; /* Allows the container to take full width */
+  background-color: #21252b; /* Card background color */
+  border-radius: 10px; /* Card border radius */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Card box shadow */
+  color: #f8f8f2; /* Text color */
   }
   
   .contactInfo img {
@@ -27,12 +31,21 @@
   }
   
   .socialIcon {
+    position: relative;
+  padding: 2em;
+  margin: 0 auto; /* Updated to 0 to remove side margins */
+  max-width: 100%; /* Allows the container to take full width */
+  background-color: #21252b; /* Card background color */
+  border-radius: 10px; /* Card border radius */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Card box shadow */
+  color: #f8f8f2; /* Text color */
   width: 25px;
   height: 25px;
   margin: 0 10px;
   }
   
   .emailIcon {
+    
   width: 25px;
   height: 25px;
   margin-bottom: 2px;

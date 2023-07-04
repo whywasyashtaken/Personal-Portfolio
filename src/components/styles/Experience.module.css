@@ -3,8 +3,13 @@
 .experienceContainer {
   position: relative;
   padding: 2em;
-  margin: 2em auto;
-  max-width: 800px;
+  margin: 0 auto; /* Updated to 0 to remove side margins */
+  max-width: 100%; /* Allows the container to take full width */
+  background-color: #21252b; /* Card background color */
+  border-radius: 10px; /* Card border radius */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Card box shadow */
+  color: #f8f8f2; /* Text color */
+  padding-left: 300px;
 }
 
 .experienceContent {
@@ -38,8 +43,8 @@
 @media (max-width: 768px) {
   .experienceContainer {
     padding: 1em;
-    margin: 1em auto;
-    max-width: 95%;
+    margin: 0 auto; /* Updated to 0 to remove side margins in mobile view */
+    max-width: 100%; /* Updated to 100% to span full width on mobile */
   }
 
   .experienceContent {

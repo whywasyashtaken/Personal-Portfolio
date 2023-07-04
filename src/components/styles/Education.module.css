@@ -3,18 +3,28 @@
 .educationContainer {
   position: relative;
   padding: 2em;
-  margin: 2em auto;
-  max-width: 800px;
+  margin: 0 auto;
+  max-width: 100%;
+  background-color: #21252b;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
+  color: #f8f8f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .educationContent {
   font-size: 1.2em;
-  color: #333;
-  text-align: left;
+  color: #f8f8f2;
+  text-align: center;
+  width: 100%;
 }
 
 .educationContent ul {
-  padding-left: 20px;
+  list-style-position: inside;
+  padding-left: 0;
 }
 
 .educationContent b {
@@ -22,19 +32,47 @@
   font-size: 1.4em;
   display: block;
   margin-bottom: 0.5em;
+  text-align: left;
 }
 
 .educationContent p {
-  margin-bottom: 1em;
+  margin-bottom: 0.5em; /* Reduced margin-bottom */
   color: whitesmoke;
+}
+
+.courseWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; /* Align content to baseline */
+  flex-wrap: wrap;
+}
+
+.courseLabel {
+  margin-bottom: 0.5em; /* Reduced margin-bottom */
+  width: 40%; /* Adjust as needed */
+  text-align: right; /* Aligns text to right */
+}
+
+.courseInfo {
+  margin-bottom: 0.5em; /* Reduced margin-bottom */
+  width: 55%; /* Adjust as needed */
+  text-align: left; /* Aligns text to left */
+}
+
+/* Desktop styles */
+@media (min-width: 769px) {
+  .educationContainer {
+    padding-left: 300px; /* Adjust padding-left for desktop */
+  }
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
   .educationContainer {
     padding: 1em;
-    margin: 1em auto;
-    max-width: 95%;
+    margin: 0 auto;
+    max-width: 100%;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow */
   }
 
   .educationContent {
@@ -43,6 +81,17 @@
 
   .educationContent b {
     font-size: 1.2em;
+  }
+
+  .courseWrapper {
+    flex-direction: row; /* Changed to row for mobile */
+  }
+
+  .courseLabel,
+  .courseInfo {
+    width: 50%; /* Adjust as needed */
+    text-align: center; /* Aligns text to center in mobile view */
+    margin-bottom: 0.25em; /* Reduced margin-bottom */
   }
 }
 

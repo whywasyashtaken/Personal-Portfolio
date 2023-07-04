@@ -15,18 +15,17 @@ function Experience() {
       transition={{ duration: 1 }}
     >
       <div className={styles.experienceContent}>
-        <p>
-          <ul>
-       <p><li><b>Graduate Assistant at Saint Louis University</b></li></p> 
-       <ul> <li>Working as a Tech Lead for open-source projects.</li> 
-        <li>organizing Scrum Meetings, and problem-solving sessions.</li> 
-        <li>Working with my team to build software from scratch while learning new technologies.</li>
-          <li>Ensuring quality and following Scrum Principles.</li>
-          
-          <li>The Links for my current projects are : <a href="https://github.com/oss-slu/lrda_mobile ">LRDA</a> and <a href="https://github.com/oss-slu/python_tbe">Python TBE</a></li>
+        <ul>
+          <li><b>Graduate Assistant at Saint Louis University</b>
+            <ul> 
+              <li>Working as a Tech Lead for open-source projects.</li> 
+              <li>Organizing Scrum Meetings, and problem-solving sessions.</li> 
+              <li>Working with my team to build software from scratch while learning new technologies.</li>
+              <li>Ensuring quality and following Scrum Principles.</li>
+              <li>The Links for my current projects are : <a href="https://github.com/oss-slu/lrda_mobile ">LRDA</a> and <a href="https://github.com/oss-slu/python_tbe">Python TBE</a></li>
+            </ul>
+          </li>
         </ul>
-        </ul>
-        </p>
         <p>
           My Previous Positions were as follows:
         </p>
@@ -40,6 +39,7 @@ function Experience() {
               <li>Managed a team of developers to deliver on time, within budget & with high-quality standards.</li>
             </ul>
           </li>
+          <p></p>
           <li>
             <b>Full Stack Developer at HeadStrait Exceptional Software Mumbai</b>
             <ul>
