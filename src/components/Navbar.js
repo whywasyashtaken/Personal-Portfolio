@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import { FaBook } from 'react-icons/fa';
-import { BsX } from 'react-icons/bs'; // Import close icon
+import { BsX } from 'react-icons/bs';
 import styles from './styles/Navbar.module.css';
 import { motion } from 'framer-motion';
 
@@ -19,7 +19,7 @@ function Navbar() {
 
   const handleMenuClick = () => {
     setMenuActive(!menuActive);
-    setBookOpen(false); // Close the book when opening the menu
+    setBookOpen(false);
   };
 
   return (
@@ -31,20 +31,17 @@ function Navbar() {
       transition={{ duration: 1 }}
     >
       <button className={styles['menu-icon']} onClick={handleMenuClick}>
-      📓
+        {bookOpen ? <BsX /> : <FaBook />}
       </button>
       <ul className={`${styles['nav-links']} ${menuActive ? styles.active : ''}`}>
         <li>
-          <ScrollLink
+        <ScrollLink
             to="home"
             smooth={true}
             duration={500}
             className={styles.link}
             active={activeSection === 'home'}
-            onClick={() => {
-              handleSetActive('home');
-              setBookOpen(false); // Close the book when selecting a section
-            }}
+            onClick={() => handleSetActive('home')}
           >
             Home
           </ScrollLink>
@@ -69,7 +66,6 @@ function Navbar() {
             className={styles.link}
             active={activeSection === 'skills'}
             onClick={() => handleSetActive('skills')}
-            
           >
             Skills
           </ScrollLink>

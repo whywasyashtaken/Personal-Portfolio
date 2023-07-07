@@ -39,7 +39,6 @@
   transform: scale(1);
   background-color: rgba(44, 62, 80, 0.9);
   height: 100vh;
-  padding-left: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -50,7 +49,6 @@
   font-size: 30px;
   color: #ecf0f1;
   background-color: #282c34;
-  cursor: pointer;
 }
 /* Navbar.module.css */
 
@@ -84,6 +82,8 @@
     align-items: center;
     justify-content: center;
     transform: scale(0);
+    margin: 0; /* Added this line to remove extra margins */
+    padding: 0; /* Added this line to remove extra padding */
   }
 
   .navbar .nav-links.active {

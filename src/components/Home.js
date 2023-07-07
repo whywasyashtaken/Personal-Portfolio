@@ -8,6 +8,7 @@ import Education from './Education';
 import { InView } from 'react-intersection-observer';
 import Projects from './Projects';
 import Contact from './Contact';
+import myPhoto from "./icons/my_photo.jpg"
 
 const sectionVariants = {
   hidden: { opacity: 0, scale: 0.9 },
@@ -17,7 +18,6 @@ const sectionVariants = {
 const Home = () => {
   return (
     <motion.div
-    id="home"
       className={styles.home} // Add the CSS module class here
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -25,14 +25,29 @@ const Home = () => {
       transition={{ duration: 1 }}
     >
       <div className={styles.sectionContainer}>
-        <h1>Welcome to my portfolio website!</h1>
-        <p>
-          My name is Yash Bhatia, I'm a Computer Science student at Saint Louis University, graduating in 2024. I have a diverse set of skills, ranging from Java, C/C++, JavaScript, HTML, CSS, Python, React Js, to Node Js and many more.
-        </p>
-        <p>To know more about my education, skills, experience, projects, etc please scroll through the website thank you .</p>
-        <p><a href="https://drive.google.com/file/d/1EDBTREuVzEHCFo1PDqdhcVcBe2xVsYiY/view?usp=sharing">My Resume</a></p>
-      </div>
+      <InView triggerOnce>
+          {({ inView, ref }) => (
+         <motion.div id="home" ref={ref} variants={sectionVariants} initial="hidden" animate={inView ? "show" : "hidden"}>
+         <h2 className={styles.sectionHeader}>Welcome</h2>
+         <img src={myPhoto} alt="me" className={styles.myPhoto} />
+         <div className={styles.textWrapper}>
+           <div className={styles.description}>
+             <h1>Welcome to my portfolio website!</h1>
+             <p>
+               My name is Yash Bhatia, I'm a Computer Science student at Saint Louis University, graduating in 2024. I have a diverse set of skills, ranging from Java, C/C++, JavaScript, HTML, CSS, Python, React Js, to Node Js and many more.
+             </p>
+             <p>To know more about my education, skills, experience, projects, etc please scroll through the website thank you .</p>
+             <p><a href="https://drive.google.com/file/d/1EDBTREuVzEHCFo1PDqdhcVcBe2xVsYiY/view?usp=sharing">My Resume</a></p>
+           </div>
+         </div>
+       </motion.div>
+       
+        
+       )}
+     </InView>
 
+      </div>
+      
       <InView triggerOnce>
           {({ inView, ref }) => (
             <motion.div

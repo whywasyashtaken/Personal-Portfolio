@@ -6,14 +6,32 @@
   text-align: center;
   padding: 20px;
   padding-top: 100px; /* Add a top padding here */
-  background-color: #282c34;
+  background-color: #8eb3fc;
   color: #f8f8f2;
+  scroll-behavior: smooth
 }
 
 .home h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #f8f8f2;
 }
+
+.myPhoto {
+  border-radius: 50%; /* This will make the photo circular */
+  width: 200px; /* Set the width as required */
+  height: 200px; /* Set the height as required */
+  object-fit: cover; /* This will make sure your image is scaled properly */
+}
+
+.textContainer {
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+  max-width: 600px; /* Set the max-width as per your requirement */
+}
+
 
 .home p {
   font-size: 1.2rem;
@@ -22,6 +40,8 @@
 }
 
 .sectionContainer {
+  display: grid;
+  justify-items: center;
   padding: 2em;
   margin: 2em auto;
   max-width: 100%; /* Adjusted to 100% to make card layout cover the screen */
@@ -29,6 +49,7 @@
   border-radius: 10px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
 }
+
 
 .sectionHeader {
   font-size: 2em;
@@ -50,6 +71,13 @@
   text-align: center;
 }
 
+.textWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+
 .header {
   text-align: center;
   font-size: 2em;
@@ -58,10 +86,22 @@
 }
 
 .description {
-  text-align: left;
-  font-size: 1.2em;
-  color: #f8f8f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 600px; /* Adjust this as needed */
 }
+
+.description a {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+
+
+
 
 .description ul {
   padding-left: 0;

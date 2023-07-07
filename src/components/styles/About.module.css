@@ -14,9 +14,20 @@
   color: white;
 }
 
+.descriptionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+  max-width: 600px; /* Set the max-width as per your requirement */
+  margin: 0 auto; 
+}
+
 .description {
   font-size: 1.2em;
   color: white;
+  width: 100%; /* Ensure it takes up the full width of its parent */
 }
 
 /* Media queries for mobile */
@@ -33,4 +44,5 @@
   .description {
     font-size: 1em;
   }
+
 }
