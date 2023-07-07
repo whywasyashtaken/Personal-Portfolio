@@ -10,6 +10,17 @@
   z-index: 1000;
 }
 
+.signature {
+  color: #ffffff;
+  font-family: "Your Desired Font", sans-serif;
+  font-size: 20px; /* Change this as desired */
+  /* Add any other styling as you see fit */
+}
+
+.navbar .menu-icon:focus {
+  color: rgba(255, 255, 255, 1); /* Make the text fully opaque when focused */
+}
+
 .navbar a {
   color: #ecf0f1;
   text-decoration: none;
@@ -49,6 +60,13 @@
   font-size: 30px;
   color: #ecf0f1;
   background-color: #282c34;
+
+  background: none; /* Remove the default button background */
+  border: none; /* Remove the default button border */
+  outline: none; /* Remove the default focus outline */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  color: rgba(255, 255, 255, 0.7); /* Make the text more subtle by lowering the opacity */
+
 }
 /* Navbar.module.css */
 

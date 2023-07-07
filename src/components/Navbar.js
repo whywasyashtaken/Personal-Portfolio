@@ -4,6 +4,8 @@ import { FaBook } from 'react-icons/fa';
 import { BsX } from 'react-icons/bs';
 import styles from './styles/Navbar.module.css';
 import { motion } from 'framer-motion';
+import { FiMenu } from 'react-icons/fi';
+
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState('');
@@ -31,8 +33,10 @@ function Navbar() {
       transition={{ duration: 1 }}
     >
       <button className={styles['menu-icon']} onClick={handleMenuClick}>
-        {bookOpen ? <BsX /> : <FaBook />}
-      </button>
+  {menuActive ? <BsX /> : <span className={styles.signature}>ybhatia</span>}
+</button>
+
+
       <ul className={`${styles['nav-links']} ${menuActive ? styles.active : ''}`}>
         <li>
         <ScrollLink
