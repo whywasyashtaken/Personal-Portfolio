@@ -4,7 +4,7 @@
 Location: St. Louis, Missouri, United States  
 Email: [ybhatia@slu.edu](mailto:ybhatia@slu.edu)  
 Phone: +1 (314)- 814- 6036  
-LinkedIn: [linkedin.com/in/yashbhatia238/](https://www.linkedin.com/in/yashbhatia238/)  
+LinkedIn: [yashbhatia238](https://www.linkedin.com/in/yashbhatia238/)  
 GitHub: [github.com/yashb196](https://github.com/yashb196)  
 Portfolio: [Yash Kamal Bhatia](https://yashb196.github.io/yashb196/)
 
