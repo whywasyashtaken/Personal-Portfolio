@@ -1,59 +1,196 @@
-/* Experience.module.css */
+/* Experience.module.css - Netflix-inspired */
 
 .experienceContainer {
   position: relative;
-  padding: 2em;
-  margin: 0 auto; /* Updated to 0 to remove side margins */
-  max-width: 100%; /* Allows the container to take full width */
-  background-color: #21252b; /* Card background color */
-  border-radius: 10px; /* Card border radius */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Card box shadow */
-  color: #f8f8f2; /* Text color */
-  padding-left: 300px;
+  padding: 0;
+  margin: 0;
+  max-width: 1400px;
+  width: 100%;
+  z-index: 2;
 }
 
 .experienceContent {
-  font-size: 1.2em;
-  color: white;
-  text-align: left;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-.experienceContent ul {
-  padding-left: 20px;
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 3rem;
+  text-align: center;
+  background: linear-gradient(135deg, #e50914, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.experienceContent b {
-  color: whitesmoke;
-  font-size: 1.4em;
-  display: block;
-  margin-bottom: 0.5em;
+.experienceCard {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.experienceContent p {
-  margin-bottom: 1em;
-  color: whitesmoke;
+.experienceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e50914, #00d4ff, #e50914);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
 }
 
-.experienceContent a {
-  color: #50fa7b; /* Mint green for contrast and visibility */
-  text-decoration: none;
+.experienceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(229, 9, 20, 0.2);
+}
+
+.cardHeader {
+  margin-bottom: 1.5rem;
+}
+
+.jobTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.jobTitle h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.status {
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status.current {
+  background: rgba(0, 212, 255, 0.2);
+  color: #00d4ff;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.status.completed {
+  background: rgba(80, 250, 123, 0.2);
+  color: #50fa7b;
+  border: 1px solid rgba(80, 250, 123, 0.3);
+}
+
+.company {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e50914;
+  margin: 0 0 1rem 0;
+}
+
+.metaInfo {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+.duration, .location {
+  font-size: 1rem;
+  color: #b3b3b3;
+  font-weight: 500;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.achievements li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+.achievements li::before {
+  content: '▶';
+  position: absolute;
+  left: 0;
+  color: #e50914;
+  font-size: 0.8rem;
+  top: 0.2rem;
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
 /* Mobile styles */
 @media (max-width: 768px) {
   .experienceContainer {
-    padding: 1em;
-    margin: 0 auto; /* Updated to 0 to remove side margins in mobile view */
-    max-width: 100%; /* Updated to 100% to span full width on mobile */
+    padding: 1rem;
   }
 
-  .experienceContent {
-    font-size: 1em;
+  .title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
-  .experienceContent b {
-    font-size: 1.2em;
+  .experienceCard {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .jobTitle {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .jobTitle h2 {
+    font-size: 1.5rem;
+  }
+
+  .company {
+    font-size: 1.1rem;
+  }
+
+  .metaInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .achievements li {
+    font-size: 1rem;
+    padding-left: 1.5rem;
   }
 }
-
-/* ...rest of your CSS... */

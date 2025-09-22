@@ -1,47 +1,114 @@
 import React from 'react';
 import styles from './styles/Contact.module.css';
 import { motion } from 'framer-motion';
-import githubIcon from './icons/github.png';
-import phoneIcon from './icons/phone.png';
-import linkedinIcon from './icons/linkedin.png';
-import youtubeIcon from './icons/youtube.png';
-import twitterIcon from './icons/twitter.png';
-import emailIcon from './icons/gmail.png';
+import { FaGithub, FaLinkedin, FaYoutube, FaTwitter, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 function Contact() {
+  const contactMethods = [
+    {
+      type: "Email",
+      value: "ybhatia@slu.edu",
+      url: "mailto:ybhatia@slu.edu",
+      icon: FaEnvelope,
+      description: "Send me an email"
+    },
+    {
+      type: "Phone",
+      value: "+1 (314)-814-6036",
+      url: "tel:+13148146036",
+      icon: FaPhone,
+      description: "Call me directly"
+    }
+  ];
+
+  const socialLinks = [
+    {
+      name: "GitHub",
+      url: "https://github.com/yashb196",
+      icon: FaGithub,
+      description: "View my code repositories"
+    },
+    {
+      name: "LinkedIn",
+      url: "https://www.linkedin.com/in/yashbhatia238/",
+      icon: FaLinkedin,
+      description: "Connect professionally"
+    },
+    {
+      name: "YouTube",
+      url: "https://www.youtube.com/@BhatiaGamingTM",
+      icon: FaYoutube,
+      description: "Watch my content"
+    },
+    {
+      name: "Twitter",
+      url: "https://twitter.com/ykb238?s=21&t=iLoOeYdJfBqY_tvJ51NGLg",
+      icon: FaTwitter,
+      description: "Follow my updates"
+    }
+  ];
+
   return (
-    <motion.div
-      className={styles.home}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
-    >
-      <div className={styles.contact}>
-        <div className={styles.contactInfo}>
-          <img src={emailIcon} alt="Email" className={`${styles.icon} ${styles.emailIcon}`} />
-          : <a href="mailto:ybhatia@slu.edu">ybhatia@slu.edu</a>
+    <div className={styles.contactWrapper}>
+      <div className={styles.contactContainer}>
+        {/* Contact Methods */}
+        <div className={styles.contactSection}>
+          <h2 className={styles.sectionTitle}>Get In Touch</h2>
+          <div className={styles.contactGrid}>
+            {contactMethods.map((method, index) => {
+              const IconComponent = method.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className={styles.contactCard}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  onClick={() => window.open(method.url, '_blank', 'noopener,noreferrer')}
+                >
+                  <div className={styles.cardIcon}>
+                    <IconComponent size={24} color="#e50914" />
+                  </div>
+                  <div className={styles.cardContent}>
+                    <h3 className={styles.cardTitle}>{method.type}</h3>
+                    <p className={styles.cardValue}>{method.value}</p>
+                    <p className={styles.cardDescription}>{method.description}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
-        <div className={styles.contactInfo}>
-          <img src={phoneIcon} alt="Phone" className={`${styles.icon} ${styles.phoneIcon}`} />
-          : <a href="tel:+13148146036">+1 (314)-814-6036</a>
-        </div>
-        <div className={styles.socialIcons}>
-          <a href="https://github.com/yashb196" target="_blank" rel="noopener noreferrer">
-            <img src={githubIcon} alt="GitHub" className={`${styles.icon} ${styles.socialIcon}`} />
-          </a>
-          <a href="https://www.linkedin.com/in/yashbhatia238/" target="_blank" rel="noopener noreferrer">
-            <img src={linkedinIcon} alt="LinkedIn" className={`${styles.icon} ${styles.socialIcon}`} />
-          </a>
-          <a href="https://www.youtube.com/@BhatiaGamingTM" target="_blank" rel="noopener noreferrer">
-            <img src={youtubeIcon} alt="YouTube" className={`${styles.icon} ${styles.socialIcon}`} />
-          </a>
-          <a href="https://twitter.com/ykb238?s=21&t=iLoOeYdJfBqY_tvJ51NGLg" target="_blank" rel="noopener noreferrer">
-            <img src={twitterIcon} alt="Twitter" className={`${styles.icon} ${styles.socialIcon}`} />
-          </a>
+
+        {/* Social Links */}
+        <div className={styles.socialSection}>
+          <h2 className={styles.sectionTitle}>Connect With Me</h2>
+          <div className={styles.socialGrid}>
+            {socialLinks.map((social, index) => {
+              const IconComponent = social.icon;
+              return (
+                <motion.div
+                  key={index}
+                  className={styles.socialCard}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: (index + 2) * 0.1 }}
+                  onClick={() => window.open(social.url, '_blank', 'noopener,noreferrer')}
+                >
+                  <div className={styles.socialIcon}>
+                    <IconComponent size={28} color="#e50914" />
+                  </div>
+                  <div className={styles.socialContent}>
+                    <h3 className={styles.socialName}>{social.name}</h3>
+                    <p className={styles.socialDescription}>{social.description}</p>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

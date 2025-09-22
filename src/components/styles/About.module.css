@@ -1,48 +1,103 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #0c0c0c 0%, #1a1a1a 50%, #2d2d2d 100%);
+}
+
 .aboutContainer {
   position: relative;
-  padding: 2em;
-  margin: 0 auto; /* Updated to 0 to remove side margins */
-  max-width: 100%; /* Allows the container to take full width */
-  background-color: #21252b; /* Card background color */
-  border-radius: 10px; /* Card border radius */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5); /* Card box shadow */
-  color: #f8f8f2; /* Text color */
+  padding: 3rem;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(229, 9, 20, 0.2);
 }
 
 .header {
-  font-size: 1.8em;
-  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #e50914, #00d4ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .descriptionContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
+  text-align: center;
   width: 100%;
-  max-width: 600px; /* Set the max-width as per your requirement */
+  max-width: 800px;
   margin: 0 auto; 
 }
 
 .description {
-  font-size: 1.2em;
-  color: white;
-  width: 100%; /* Ensure it takes up the full width of its parent */
+  font-size: 1.2rem;
+  color: #b3b3b3;
+  width: 100%;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
 }
 
 /* Media queries for mobile */
 @media screen and (max-width: 767px) {
+  .home {
+    padding: 1rem;
+  }
+
   .aboutContainer {
-    margin-top: 40px;
-    padding: 10px;
+    padding: 1.5rem;
   }
 
   .header {
-    font-size: 1.5em;
+    font-size: 2rem;
   }
 
   .description {
-    font-size: 1em;
+    font-size: 1rem;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  .home {
+    padding: 0.5rem;
   }
 
+  .aboutContainer {
+    padding: 1rem;
+  }
+
+  .header {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .aboutContainer:hover {
+    transform: none;
+  }
 }

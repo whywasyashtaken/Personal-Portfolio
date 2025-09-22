@@ -1,16 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import { FaBook } from 'react-icons/fa';
 import { BsX } from 'react-icons/bs';
 import styles from './styles/Navbar.module.css';
 import { motion } from 'framer-motion';
-import { FiMenu } from 'react-icons/fi';
-
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState('');
   const [menuActive, setMenuActive] = useState(false);
-  const [bookOpen, setBookOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 50;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const handleSetActive = (section) => {
     setActiveSection(section);
@@ -21,16 +28,15 @@ function Navbar() {
 
   const handleMenuClick = () => {
     setMenuActive(!menuActive);
-    setBookOpen(false);
   };
 
   return (
     <motion.nav
-      className={`${styles.navbar} ${menuActive ? styles.active : ''}`}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
+      className={`${styles.navbar} ${menuActive ? styles.active : ''} ${scrolled ? styles.scrolled : ''}`}
+      initial={{ opacity: 0, y: -100 }}
+      animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <button className={styles['menu-icon']} onClick={handleMenuClick}>
   {menuActive ? <BsX /> : <span className={styles.signature}>ybhatia</span>}
@@ -108,6 +114,18 @@ function Navbar() {
             onClick={() => handleSetActive('projects')}
           >
             Projects
+          </ScrollLink>
+        </li>
+        <li>
+          <ScrollLink
+            to="research"
+            smooth={true}
+            duration={500}
+            className={styles.link}
+            active={activeSection === 'research'}
+            onClick={() => handleSetActive('research')}
+          >
+            Research
           </ScrollLink>
         </li>
         <li>

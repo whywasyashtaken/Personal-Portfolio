@@ -1,98 +1,229 @@
-/* Education.module.css */
+/* Education.module.css - Clean Netflix-inspired design */
 
-.educationContainer {
-  position: relative;
-  padding: 2em;
+.educationWrapper {
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
-  max-width: 100%;
-  background-color: #21252b;
-  border-radius: 10px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5);
-  color: #f8f8f2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 2rem;
 }
 
-.educationContent {
-  font-size: 1.2em;
-  color: #f8f8f2;
-  text-align: center;
+.educationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   width: 100%;
 }
 
-.educationContent ul {
-  list-style-position: inside;
-  padding-left: 0;
+.educationCard {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: fit-content;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.educationContent b {
-  color: whitesmoke;
-  font-size: 1.4em;
-  display: block;
-  margin-bottom: 0.5em;
-  text-align: left;
+.educationCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e50914, #00d4ff, #e50914);
+  background-size: 200% 100%;
+  animation: gradientShift 3s ease infinite;
 }
 
-.educationContent p {
-  margin-bottom: 0.5em; /* Reduced margin-bottom */
-  color: whitesmoke;
+.educationCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(229, 9, 20, 0.2);
 }
 
-.courseWrapper {
+.cardHeader {
+  margin-bottom: 2rem;
+}
+
+.degreeHeader {
   display: flex;
   justify-content: space-between;
-  align-items: baseline; /* Align content to baseline */
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.degreeTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.status {
+  background: rgba(80, 250, 123, 0.2);
+  color: #50fa7b;
+  border: 1px solid rgba(80, 250, 123, 0.3);
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.university {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e50914;
+  margin: 0 0 1rem 0;
+}
+
+.degreeInfo {
+  display: flex;
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
-.courseLabel {
-  margin-bottom: 0.5em; /* Reduced margin-bottom */
-  width: 40%; /* Adjust as needed */
-  text-align: right; /* Aligns text to right */
+.duration, .location {
+  font-size: 1rem;
+  color: #b3b3b3;
+  font-weight: 500;
 }
 
-.courseInfo {
-  margin-bottom: 0.5em; /* Reduced margin-bottom */
-  width: 55%; /* Adjust as needed */
-  text-align: left; /* Aligns text to left */
+.coursesSection {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Desktop styles */
-@media (min-width: 769px) {
-  .educationContainer {
-    padding-left: 300px; /* Adjust padding-left for desktop */
+.coursesTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.coursesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 0.8rem;
+  flex-grow: 1;
+}
+
+.courseItem {
+  position: relative;
+  padding: 0.8rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border-left: 3px solid #e50914;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+  line-height: 1.4;
+  transition: all 0.3s ease;
+}
+
+.courseItem:hover {
+  background: rgba(229, 9, 20, 0.1);
+  transform: translateX(5px);
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
   }
 }
 
-/* Mobile styles */
+/* Mobile Responsive */
 @media (max-width: 768px) {
-  .educationContainer {
-    padding: 1em;
-    margin: 0 auto;
-    max-width: 100%;
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2); /* Reduced shadow */
+  .educationWrapper {
+    padding: 1rem;
   }
-
-  .educationContent {
-    font-size: 1em;
+  
+  .educationCard {
+    padding: 1.5rem;
   }
-
-  .educationContent b {
-    font-size: 1.2em;
+  
+  .degreeTitle {
+    font-size: 1.5rem;
   }
-
-  .courseWrapper {
-    flex-direction: row; /* Changed to row for mobile */
+  
+  .university {
+    font-size: 1.1rem;
   }
-
-  .courseLabel,
-  .courseInfo {
-    width: 50%; /* Adjust as needed */
-    text-align: center; /* Aligns text to center in mobile view */
-    margin-bottom: 0.25em; /* Reduced margin-bottom */
+  
+  .degreeInfo {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .degreeHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .status {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .coursesList {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  
+  .courseItem {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.9rem;
   }
 }
 
-/* ...rest of your CSS... */
+@media (max-width: 480px) {
+  .educationWrapper {
+    padding: 0.5rem;
+  }
+  
+  .educationCard {
+    padding: 1rem;
+  }
+  
+  .degreeTitle {
+    font-size: 1.3rem;
+  }
+  
+  .university {
+    font-size: 1rem;
+  }
+  
+  .coursesTitle {
+    font-size: 1rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .educationCard:hover {
+    transform: none;
+  }
+  
+  .courseItem:hover {
+    transform: none;
+    background: rgba(255, 255, 255, 0.05);
+  }
+}
