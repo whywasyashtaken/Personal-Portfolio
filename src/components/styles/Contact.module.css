@@ -12,7 +12,8 @@
   flex-direction: row;
   gap: 2rem;
   width: 100%;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .sectionTitle {
@@ -31,13 +32,18 @@
 .contactSection {
   flex: 1;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .contactGrid {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  flex-direction: row;
+  gap: 1.5rem;
   width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .contactCard {
@@ -45,15 +51,17 @@
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 1.8rem;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   min-height: 120px;
+  min-width: 250px;
+  flex: 1;
 }
 
 .contactCard::before {
@@ -96,21 +104,22 @@
 }
 
 .cardTitle {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #ffffff;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.6rem 0;
 }
 
 .cardValue {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #e50914;
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.6rem 0;
   font-weight: 500;
+  word-break: break-all;
 }
 
 .cardDescription {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: #b3b3b3;
   margin: 0;
   line-height: 1.4;
@@ -120,6 +129,9 @@
 .socialSection {
   flex: 1;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .socialGrid {
@@ -127,6 +139,8 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
+  max-width: 400px;
+  justify-items: center;
 }
 
 .socialCard {
@@ -215,18 +229,36 @@
 /* Tablet Responsive */
 @media (max-width: 1024px) {
   .contactContainer {
-    flex-direction: column;
-    gap: 2rem;
+    justify-content: flex-start;
   }
   
   .contactGrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 1.2rem;
   }
   
-  .socialGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .contactCard {
+    min-width: 220px;
+    flex: 1 1 calc(50% - 0.6rem);
+    padding: 1.5rem;
+    min-height: 110px;
+  }
+  
+  .cardIcon {
+    width: 55px;
+    height: 55px;
+  }
+  
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+  
+  .cardValue {
+    font-size: 1rem;
+  }
+  
+  .cardDescription {
+    font-size: 0.9rem;
   }
 }
 
@@ -237,23 +269,25 @@
   }
   
   .contactContainer {
-    flex-direction: column;
-    gap: 2rem;
+    justify-content: flex-start;
   }
   
   .sectionTitle {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+    text-align: left;
   }
   
   .contactGrid {
+    flex-direction: column;
     gap: 1rem;
   }
   
   .contactCard {
-    padding: 1.5rem;
-    min-height: 100px;
+    padding: 1.2rem;
+    min-height: 90px;
     gap: 1rem;
+    min-width: 100%;
   }
   
   .cardIcon {
@@ -266,34 +300,11 @@
   }
   
   .cardValue {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
   
   .cardDescription {
-    font-size: 0.8rem;
-  }
-  
-  .socialGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .socialCard {
-    padding: 1.5rem;
-    min-height: 130px;
-  }
-  
-  .socialIcon {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .socialName {
-    font-size: 1.1rem;
-  }
-  
-  .socialDescription {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 }
 
