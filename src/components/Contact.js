@@ -8,8 +8,8 @@ function Contact() {
   const allContacts = [
     {
       type: "Email",
-      value: "ybhatia@slu.edu",
-      url: "mailto:ybhatia@slu.edu",
+      value: "ybhatia125@gmail.com",
+      url: "ybhatia125@gmail.com",
       icon: FaEnvelope,
       description: "Send me an email"
     },
@@ -29,7 +29,7 @@ function Contact() {
     },
     {
       type: "LinkedIn",
-      value: "yashbhatia238",
+      value: "whywasyashtaken",
       url: "https://www.linkedin.com/in/whywasyashtaken/",
       icon: FaLinkedin,
       description: "Connect professionally"
@@ -43,8 +43,8 @@ function Contact() {
     },
     {
       type: "X",
-      value: "yashb196",
-      url: "https://twitter.com/ykb238?s=21&t=iLoOeYdJfBqY_tvJ51NGLg",
+      value: "whywasyashtaken",
+      url: "https://x.com/whywasyashtaken",
       icon: FaXTwitter,
       description: "Follow my updates"
     }
