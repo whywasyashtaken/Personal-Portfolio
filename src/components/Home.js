@@ -49,6 +49,7 @@ const itemVariants = {
 };
 
 const Home = () => {
+  console.log('Home component is rendering');
   return (
     <motion.div
       className={styles.home}
@@ -57,6 +58,11 @@ const Home = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
+      {/* Test div to see if component renders */}
+      <div style={{color: 'white', fontSize: '24px', padding: '20px', background: 'red'}}>
+        TEST: Home component is rendering!
+      </div>
+      
       {/* Hero Section */}
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
