@@ -55,6 +55,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/Personal-Portfolio/" element={<Home />} />
+        <Route path="/Personal-Portfolio" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Personal-Portfolio/about" element={<About />} />
         <Route path="/Personal-Portfolio/skills" element={<Skills />} />
         <Route path="/Personal-Portfolio/experience" element={<Experience />} />
