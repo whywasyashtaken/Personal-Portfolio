@@ -21,22 +21,22 @@ function TitleUpdater() {
   useEffect(() => {
     const getPageTitle = (pathname) => {
       switch (pathname) {
-        case '/yashb196/':
+        case '/Personal-Portfolio/':
           return 'Yash Bhatia - Full-Stack Developer Portfolio';
-        case '/yashb196/about':
+        case '/Personal-Portfolio/about':
           return 'About - Yash Bhatia Portfolio';
-        case '/yashb196/skills':
+        case '/Personal-Portfolio/skills':
           return 'Skills - Yash Bhatia Portfolio';
-        case '/yashb196/experience':
+        case '/Personal-Portfolio/experience':
           return 'Experience - Yash Bhatia Portfolio';
-        case '/yashb196/education':
+        case '/Personal-Portfolio/education':
           return 'Education - Yash Bhatia Portfolio';
-                case '/yashb196/projects':
-                  return 'Projects - Yash Bhatia Portfolio';
-                case '/yashb196/research':
-                  return 'Research - Yash Bhatia Portfolio';
-                case '/yashb196/contact':
-                  return 'Contact - Yash Bhatia Portfolio';
+        case '/Personal-Portfolio/projects':
+          return 'Projects - Yash Bhatia Portfolio';
+        case '/Personal-Portfolio/research':
+          return 'Research - Yash Bhatia Portfolio';
+        case '/Personal-Portfolio/contact':
+          return 'Contact - Yash Bhatia Portfolio';
         default:
           return 'Yash Bhatia - Full-Stack Developer Portfolio';
       }
@@ -54,14 +54,14 @@ function App() {
       <TitleUpdater />
       <Navbar />
       <Routes>
-        <Route path="/yashb196/" element={<Home />} />
-        <Route path="/yashb196/about" element={<About />} />
-        <Route path="/yashb196/skills" element={<Skills />} />
-        <Route path="/yashb196/experience" element={<Experience />} />
-        <Route path="/yashb196/education" element={<Education />} />
-                <Route path="/yashb196/projects" element={<Projects />} />
-                <Route path="/yashb196/research" element={<Research />} />
-                <Route path="/yashb196/contact" element={<Contact />} />
+        <Route path="/Personal-Portfolio/" element={<Home />} />
+        <Route path="/Personal-Portfolio/about" element={<About />} />
+        <Route path="/Personal-Portfolio/skills" element={<Skills />} />
+        <Route path="/Personal-Portfolio/experience" element={<Experience />} />
+        <Route path="/Personal-Portfolio/education" element={<Education />} />
+        <Route path="/Personal-Portfolio/projects" element={<Projects />} />
+        <Route path="/Personal-Portfolio/research" element={<Research />} />
+        <Route path="/Personal-Portfolio/contact" element={<Contact />} />
       </Routes>
     </Router>
   );
