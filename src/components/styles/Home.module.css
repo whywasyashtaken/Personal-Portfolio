@@ -38,17 +38,16 @@
 }
 
 .heroContent {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
   max-width: 1400px;
   width: 100%;
-  text-align: center;
 }
 
 .heroText {
-  text-align: center;
+  text-align: left;
   z-index: 3;
 }
 
@@ -390,8 +389,15 @@
   }
   
   .heroContent {
+    display: flex;
+    flex-direction: column;
     gap: 2.5rem;
     padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .heroText {
+    text-align: center;
   }
   
   .heroTitle {

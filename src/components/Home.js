@@ -108,8 +108,7 @@ const Home = () => {
             </motion.div>
           </motion.div>
           
-          {/* Temporarily commented out image section to test */}
-          {/* <motion.div 
+          <motion.div 
             className={styles.heroImage}
             variants={heroVariants}
             initial="hidden"
@@ -131,7 +130,7 @@ const Home = () => {
               <div className={styles.floatingElement}></div>
               <div className={styles.floatingElement}></div>
             </div>
-          </motion.div> */}
+          </motion.div>
         </div>
       </div>
       
