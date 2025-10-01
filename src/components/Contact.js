@@ -22,15 +22,15 @@ function Contact() {
     },
     {
       type: "GitHub",
-      value: "yashb196",
-      url: "https://github.com/yashb196",
+      value: "whywasyashtaken",
+      url: "https://github.com/whywasyashtaken",
       icon: FaGithub,
       description: "View my code repositories"
     },
     {
       type: "LinkedIn",
       value: "yashbhatia238",
-      url: "https://www.linkedin.com/in/yashbhatia238/",
+      url: "https://www.linkedin.com/in/whywasyashtaken/",
       icon: FaLinkedin,
       description: "Connect professionally"
     },
