@@ -38,16 +38,17 @@
 }
 
 .heroContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 4rem;
   align-items: center;
   max-width: 1400px;
   width: 100%;
+  text-align: center;
 }
 
 .heroText {
-  text-align: left;
+  text-align: center;
   z-index: 3;
 }
 

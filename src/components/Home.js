@@ -49,7 +49,6 @@ const itemVariants = {
 };
 
 const Home = () => {
-  console.log('Home component is rendering');
   return (
     <motion.div
       className={styles.home}
@@ -58,11 +57,6 @@ const Home = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
     >
-      {/* Test div to see if component renders */}
-      <div style={{color: 'white', fontSize: '24px', padding: '20px', background: 'red'}}>
-        TEST: Home component is rendering!
-      </div>
-      
       {/* Hero Section */}
       <div className={styles.heroSection}>
         <div className={styles.heroContent}>
@@ -114,7 +108,8 @@ const Home = () => {
             </motion.div>
           </motion.div>
           
-          <motion.div 
+          {/* Temporarily commented out image section to test */}
+          {/* <motion.div 
             className={styles.heroImage}
             variants={heroVariants}
             initial="hidden"
@@ -136,7 +131,7 @@ const Home = () => {
               <div className={styles.floatingElement}></div>
               <div className={styles.floatingElement}></div>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
       
