@@ -53,7 +53,7 @@ function Projects() {
       metrics: "AI-powered travel assistance"
     },
     {
-      title: "Crypto Wallet Dashboard",
+      title: "Crypto Tracker",
       place: "Personal Project",
       duration: "September 2023",
       description: [
@@ -61,7 +61,7 @@ function Projects() {
         "Explained optimization strategies to teammates; reduced load 25% using React hooks/lazy load",
         "Built with React.js, Netlify, and CoinGecko API integration"
       ],
-      url: "https://crypto-wallet-tracker.netlify.app",
+      url: "https://crypto-price-react-tracker.netlify.app",
       techStack: ["React.js", "Netlify", "CoinGecko API", "Performance Optimization"],
       icon: FaDatabase,
       status: "Completed",
